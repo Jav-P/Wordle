@@ -1,2 +1,2 @@
 # Wordle
-Se desarrolla el juego de palabras Wordle como aplicativo de escritorio en versión español
+Se desarrolla el juego de palabras Wordle como aplicativo de escritorio versión español
