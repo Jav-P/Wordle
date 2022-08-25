@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VistaController">
+   <children>
+      <TabPane prefHeight="700.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Instrucciones">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="700.0" />
+               </content>
+          </Tab>
+          <Tab text="Wordle">          
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="483.0" prefWidth="632.0">
+                     <children>
+                        <GridPane layoutX="21.0" layoutY="430.0" prefHeight="180.0" prefWidth="550.0" AnchorPane.bottomAnchor="61.0" AnchorPane.topAnchor="430.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="buttonA" mnemonicParsing="false" onAction="#addLetter" prefHeight="91.0" prefWidth="103.0" style="-fx-background-radius: 5;" text="A" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonS" mnemonicParsing="false" onAction="#addLetter" prefHeight="108.0" prefWidth="114.0" style="-fx-background-radius: 5;" text="S" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonZ" mnemonicParsing="false" onAction="#addLetter" prefHeight="99.0" prefWidth="79.0" style="-fx-background-radius: 5;" text="Z" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonX" mnemonicParsing="false" onAction="#addLetter" prefHeight="88.0" prefWidth="79.0" style="-fx-background-radius: 5;" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonC" mnemonicParsing="false" onAction="#addLetter" prefHeight="95.0" prefWidth="83.0" style="-fx-background-radius: 5;" text="C" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonV" mnemonicParsing="false" onAction="#addLetter" prefHeight="84.0" prefWidth="75.0" style="-fx-background-radius: 5;" text="V" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonB" mnemonicParsing="false" onAction="#addLetter" prefHeight="73.0" prefWidth="70.0" style="-fx-background-radius: 5;" text="B" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonN" mnemonicParsing="false" onAction="#addLetter" prefHeight="87.0" prefWidth="82.0" style="-fx-background-radius: 5;" text="N" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonM" mnemonicParsing="false" onAction="#addLetter" prefHeight="74.0" prefWidth="82.0" style="-fx-background-radius: 5;" text="M" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonD" mnemonicParsing="false" onAction="#addLetter" prefHeight="79.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="D" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonF" mnemonicParsing="false" onAction="#addLetter" prefHeight="95.0" prefWidth="71.0" style="-fx-background-radius: 5;" text="F" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonG" mnemonicParsing="false" onAction="#addLetter" prefHeight="92.0" prefWidth="92.0" style="-fx-background-radius: 5;" text="G" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonH" mnemonicParsing="false" onAction="#addLetter" prefHeight="98.0" prefWidth="80.0" style="-fx-background-radius: 5;" text="H" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonJ" mnemonicParsing="false" onAction="#addLetter" prefHeight="81.0" prefWidth="75.0" style="-fx-background-radius: 5;" text="J" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonK" mnemonicParsing="false" onAction="#addLetter" prefHeight="83.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="K" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonL" mnemonicParsing="false" onAction="#addLetter" prefHeight="83.0" prefWidth="66.0" style="-fx-background-radius: 5;" text="L" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonÑ" mnemonicParsing="false" onAction="#addLetter" prefHeight="98.0" prefWidth="77.0" style="-fx-background-radius: 5;" text="Ñ" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonP" mnemonicParsing="false" onAction="#addLetter" prefHeight="91.0" prefWidth="79.0" style="-fx-background-radius: 5;" text="P" GridPane.columnIndex="9">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonO" mnemonicParsing="false" onAction="#addLetter" prefHeight="79.0" prefWidth="66.0" style="-fx-background-radius: 5;" text="O" GridPane.columnIndex="8">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonI" mnemonicParsing="false" onAction="#addLetter" prefHeight="79.0" prefWidth="75.0" style="-fx-background-radius: 5;" text="I" GridPane.columnIndex="7">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonU" mnemonicParsing="false" onAction="#addLetter" prefHeight="79.0" prefWidth="83.0" style="-fx-background-radius: 5;" text="U" GridPane.columnIndex="6">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonY" mnemonicParsing="false" onAction="#addLetter" prefHeight="100.0" prefWidth="80.0" style="-fx-background-radius: 5;" text="Y" GridPane.columnIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonT" mnemonicParsing="false" onAction="#addLetter" prefHeight="88.0" prefWidth="75.0" style="-fx-background-radius: 5;" text="T" GridPane.columnIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonR" mnemonicParsing="false" onAction="#addLetter" prefHeight="99.0" prefWidth="81.0" style="-fx-background-radius: 5;" text="R" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonE" mnemonicParsing="false" onAction="#addLetter" prefHeight="86.0" prefWidth="82.0" style="-fx-background-radius: 5;" text="E" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonW" mnemonicParsing="false" onAction="#addLetter" prefHeight="79.0" prefWidth="84.0" style="-fx-background-radius: 5;" text="W" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="buttonQ" mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="Q">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="202.0" layoutY="24.0" prefHeight="392.0" prefWidth="296.0" AnchorPane.bottomAnchor="284.0" AnchorPane.topAnchor="24.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="textCA" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBA" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDA" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEA" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFA" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFB" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEB" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDB" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCB" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBB" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAB" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAC" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBC" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCC" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDC" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEC" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFC" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAD" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBD" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAE" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBE" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCD" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCE" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDD" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDE" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textED" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEE" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFD" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFE" disable="true" prefHeight="59.0" prefWidth="59.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAA" disable="true" prefHeight="59.0" prefWidth="59.0">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="buttonStart" layoutX="562.0" layoutY="73.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="73.0" text="Start" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="73.0" />
+                        <Button fx:id="buttonReinicio" layoutX="562.0" layoutY="118.0" mnemonicParsing="false" onAction="#reinicio" prefHeight="35.0" prefWidth="73.0" text="Reinicio" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="118.0" />
+                        <Button fx:id="buttonSend" layoutX="599.0" layoutY="472.0" mnemonicParsing="false" onAction="#enviar" prefHeight="25.0" prefWidth="73.0" text="Enviar" AnchorPane.rightAnchor="28.0" />
+                        <Button fx:id="buttondelet" layoutX="599.0" layoutY="507.0" mnemonicParsing="false" onAction="#borrar" prefHeight="25.0" prefWidth="73.0" text="Borrar" AnchorPane.rightAnchor="28.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Estadisticas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
