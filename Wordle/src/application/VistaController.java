@@ -63,6 +63,10 @@ public class VistaController {
     private Button buttonZ;
     
     @FXML
+    private TextField textAA;
+    @FXML
+    private TextField textAB;
+    @FXML
     private TextField textAC;
     @FXML
     private TextField textAD;
@@ -129,11 +133,94 @@ public class VistaController {
     @FXML
     private Button buttondelet;
     
+    int intento = 0;   
+    int cont=0;
+    static String objetivo = "manos";
+    
     String Palabra ="MANOS";
+    
+    TextField matriz [][]= {
+    		{textAA,textAB,textAC,textAD,textAE},
+    		{textBA,textBB,textBC,textBD,textBE},
+    		{textCA,textCB,textCC,textCD,textCE},
+    		{textDA,textDB,textDC,textDD,textDE},
+    		{textEA,textEB,textEC,textED,textEE},
+    		{textFA,textFB,textFC,textFD,textFE}
+    };
     
     @FXML
     void addLetter(ActionEvent event) {
+    	TextField matriz [][]= {
+        		{textAA,textAB,textAC,textAD,textAE},
+        		{textBA,textBB,textBC,textBD,textBE},
+        		{textCA,textCB,textCC,textCD,textCE},
+        		{textDA,textDB,textDC,textDD,textDE},
+        		{textEA,textEB,textEC,textED,textEE},
+        		{textFA,textFB,textFC,textFD,textFE}
+        };
     	System.out.println(((Button)event.getSource()).getText());
+    	if(cont<5) {    		
+    		matriz[intento][cont].setText(((Button)event.getSource()).getText());    
+    		cont++;
+    	}
+    }
+    
+    
+    public void unir () {
+    	
+		String a ="";
+		for (int i = 0; i < matriz.length; i++) {
+			a=a+matriz[intento][i];
+		}
+		System.out.println(a);
+		if(tamaño(a))comparar(a);//hay que buscar la palabra en la base de datos
+			
+	}
+	public static Boolean tamaño (String palabra) {
+		if(palabra.length()!=5)return false;
+		//Sigue la verificación si es real la palabra
+		return true;
+	}	
+	public static void comparar(String palabra) {
+		palabra=palabra.toUpperCase();
+		objetivo=objetivo.toUpperCase();
+		Boolean aux=false;
+		System.out.println(palabra+", "+objetivo);		
+		if(palabra.equals(objetivo))System.out.println("Felicitaciones, adivino la palabra");//Termina el juego		
+		for (int i = 0; i < 5; i++) {
+			aux=false;
+			for (int j = 0; j < 5; j++) {
+				if(palabra.substring(i, i+1).equalsIgnoreCase(objetivo.substring(j, j+1))) {
+					if(i==j) {
+					System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar función verde");
+					aux=true;
+					}else {
+					System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Amarillo");
+					aux=true;
+					}
+				}			
+			}
+			if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Gris");
+		}			
+	}
+    
+    
+    
+    public void limpiar() {
+    	TextField matriz [][]= {
+        		{textAA,textAB,textAC,textAD,textAE},
+        		{textBA,textBB,textBC,textBD,textBE},
+        		{textCA,textCB,textCC,textCD,textCE},
+        		{textDA,textDB,textDC,textDD,textDE},
+        		{textEA,textEB,textEC,textED,textEE},
+        		{textFA,textFB,textFC,textFD,textFE}
+        };
+    	for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matriz[i][j].setText("");
+				//textAA.setText("S");
+			}
+		}  
     }
 	
 	public void start() {
@@ -142,14 +229,75 @@ public class VistaController {
 	
 	public void reinicio() {
 		System.out.println("Reinicio");
+		limpiar();
 	}	
 	
 	public void enviar() {
+		
+		TextField matriz [][]= {
+        		{textAA,textAB,textAC,textAD,textAE},
+        		{textBA,textBB,textBC,textBD,textBE},
+        		{textCA,textCB,textCC,textCD,textCE},
+        		{textDA,textDB,textDC,textDD,textDE},
+        		{textEA,textEB,textEC,textED,textEE},
+        		{textFA,textFB,textFC,textFD,textFE}
+        };
+		
 		System.out.println("Enviar");
+		if(intento<5){
+			//unir();
+			String palabra ="";
+			for (int i = 0; i < 5; i++) {
+				palabra=palabra+matriz[intento][i].getText();
+			}
+			System.out.println("La palabra es "+palabra);
+			if(palabra.length()==5) {
+				//comparar(a);
+				palabra=palabra.toUpperCase();
+				objetivo=objetivo.toUpperCase();
+				Boolean aux=false;
+				System.out.println(palabra+", "+objetivo);		
+				if(palabra.equals(objetivo))System.out.println("Felicitaciones, adivino la palabra");//Termina el juego		
+				for (int i = 0; i < 5; i++) {
+					aux=false;
+					for (int j = 0; j < 5; j++) {
+						if(palabra.substring(i, i+1).equalsIgnoreCase(objetivo.substring(j, j+1))) {
+							if(i==j) {
+							System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar función verde");
+							aux=true;
+							}else {
+							System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Amarillo");
+							aux=true;
+							}
+						}			
+					}
+					if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Gris");
+				}
+				intento++;
+				cont=0;
+			}
+			
+			
+			
+		}
+		System.out.println(intento);
 	}
 	
 	public void borrar() {
 		System.out.println("borrar");
+		System.out.println(cont);
+		TextField matriz [][]= {
+        		{textAA,textAB,textAC,textAD,textAE},
+        		{textBA,textBB,textBC,textBD,textBE},
+        		{textCA,textCB,textCC,textCD,textCE},
+        		{textDA,textDB,textDC,textDD,textDE},
+        		{textEA,textEB,textEC,textED,textEE},
+        		{textFA,textFB,textFC,textFD,textFE}
+        };
+		if(cont>0) {			
+			cont--;
+			matriz[intento][cont].setText("");
+		}
 	}
 	
 }
