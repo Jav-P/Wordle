@@ -36,7 +36,7 @@ public class VistaController {
     @FXML
     private Button buttonN;
     @FXML
-    private Button buttonÑ;
+    private Button buttonÃ‘;
     @FXML
     private Button buttonO;
     @FXML
@@ -173,12 +173,12 @@ public class VistaController {
 			a=a+matriz[intento][i];
 		}
 		System.out.println(a);
-		if(tamaño(a))comparar(a);//hay que buscar la palabra en la base de datos
+		if(tamaÃ±o(a))comparar(a);//hay que buscar la palabra en la base de datos
 			
 	}
-	public static Boolean tamaño (String palabra) {
+	public static Boolean tamaÃ±o (String palabra) {
 		if(palabra.length()!=5)return false;
-		//Sigue la verificación si es real la palabra
+		//Sigue la verificaciï¿½n si es real la palabra
 		return true;
 	}	
 	public static void comparar(String palabra) {
@@ -192,15 +192,15 @@ public class VistaController {
 			for (int j = 0; j < 5; j++) {
 				if(palabra.substring(i, i+1).equalsIgnoreCase(objetivo.substring(j, j+1))) {
 					if(i==j) {
-					System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar función verde");
+					System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar funciï¿½n verde");
 					aux=true;
 					}else {
-					System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Amarillo");
+					System.out.println("La letra "+palabra.substring(i, i+1)+" es: funciï¿½n Amarillo");
 					aux=true;
 					}
 				}			
 			}
-			if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Gris");
+			if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: funciï¿½n Gris");
 		}			
 	}
     
@@ -229,6 +229,8 @@ public class VistaController {
 	
 	public void reinicio() {
 		System.out.println("Reinicio");
+		intento=0;
+		cont=0;
 		limpiar();
 	}	
 	
@@ -263,15 +265,15 @@ public class VistaController {
 					for (int j = 0; j < 5; j++) {
 						if(palabra.substring(i, i+1).equalsIgnoreCase(objetivo.substring(j, j+1))) {
 							if(i==j) {
-							System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar función verde");
+							System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar funciï¿½n verde");
 							aux=true;
 							}else {
-							System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Amarillo");
+							System.out.println("La letra "+palabra.substring(i, i+1)+" es: funciï¿½n Amarillo");
 							aux=true;
 							}
 						}			
 					}
-					if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: función Gris");
+					if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: funciï¿½n Gris");
 				}
 				intento++;
 				cont=0;
