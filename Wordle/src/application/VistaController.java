@@ -2,8 +2,13 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
 
 public class VistaController {
 	
@@ -139,6 +144,7 @@ public class VistaController {
     
     String Palabra ="MANOS";
     
+    
     TextField matriz [][]= {
     		{textAA,textAB,textAC,textAD,textAE},
     		{textBA,textBB,textBC,textBD,textBE},
@@ -222,7 +228,7 @@ public class VistaController {
 			}
 		}  
     }
-	
+    
 	public void start() {
 		System.out.println("Start");
 	}
@@ -231,11 +237,16 @@ public class VistaController {
 		System.out.println("Reinicio");
 		intento=0;
 		cont=0;
-		
 		limpiar();
 	}	
 	
 	public void enviar() {
+		BackgroundFill Amarillo = new BackgroundFill(Color.valueOf("#FFF700"), new CornerRadii(0), new Insets(0));
+		Background yellow = new Background(Amarillo); 
+		BackgroundFill Gris = new BackgroundFill(Color.valueOf("#90928F"), new CornerRadii(0), new Insets(0));
+		Background grey = new Background(Gris); 
+		BackgroundFill Verde = new BackgroundFill(Color.valueOf("#46FF00"), new CornerRadii(0), new Insets(0));
+		Background green = new Background(Verde); 
 		
 		TextField matriz [][]= {
         		{textAA,textAB,textAC,textAD,textAE},
@@ -264,24 +275,26 @@ public class VistaController {
 				for (int i = 0; i < 5; i++) {
 					aux=false;
 					for (int j = 0; j < 5; j++) {
-						if(palabra.substring(i, i+1).equalsIgnoreCase(objetivo.substring(j, j+1))) {
+						if(matriz[intento][i].getText().equalsIgnoreCase(objetivo.substring(j, j+1))) {
 							if(i==j) {
 							System.out.println("La letra "+palabra.substring(i, i+1)+" es: llamar funcion verde");
+							matriz[intento][i].setBackground(green);
 							aux=true;
 							}else {
 							System.out.println("La letra "+palabra.substring(i, i+1)+" es: funcion Amarillo");
+							matriz[intento][i].setBackground(yellow);
 							aux=true;
 							}
 						}			
 					}
-					if(aux.equals(false))System.out.println("La letra "+palabra.substring(i, i+1)+" es: funcion Gris");
+					if(aux.equals(false)) {
+						System.out.println("La letra "+palabra.substring(i, i+1)+" es: funcion Gris");
+						matriz[intento][i].setBackground(grey);
+					}
 				}
 				intento++;
 				cont=0;
-			}
-			
-			
-			
+			}			
 		}
 		System.out.println(intento);
 	}
