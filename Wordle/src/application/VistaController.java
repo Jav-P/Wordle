@@ -231,6 +231,7 @@ public class VistaController {
 		System.out.println("Reinicio");
 		intento=0;
 		cont=0;
+		
 		limpiar();
 	}	
 	
