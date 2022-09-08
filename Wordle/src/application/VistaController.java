@@ -41,7 +41,7 @@ public class VistaController {
     @FXML
     private Button buttonN;
     @FXML
-    private Button buttonÑ;
+    private Button buttonÃ‘;
     @FXML
     private Button buttonO;
     @FXML
@@ -179,10 +179,10 @@ public class VistaController {
 			a=a+matriz[intento][i];
 		}
 		System.out.println(a);
-		if(tamaño(a))comparar(a);//hay que buscar la palabra en la base de datos
+		if(tamaÃ±o(a))comparar(a);//hay que buscar la palabra en la base de datos
 			
 	}
-	public static Boolean tamaño (String palabra) {
+	public static Boolean tamaÃ±o (String palabra) {
 		if(palabra.length()!=5)return false;
 		//Sigue la verificaciï¿½n si es real la palabra
 		return true;
@@ -258,7 +258,7 @@ public class VistaController {
         };
 		
 		System.out.println("Enviar");
-		if(intento<5){
+		if(intento<6){
 			//unir();
 			String palabra ="";
 			for (int i = 0; i < 5; i++) {
