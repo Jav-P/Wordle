@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.poli.wordle.controller.PrincipalController">
+   <children>
+      <TabPane fx:id="tp" layoutX="60.0" layoutY="48.0" prefHeight="700.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Instrucciones">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="292.0" layoutY="54.0" text="Cómo jugar">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="64.0" layoutY="132.0" prefHeight="375.0" prefWidth="572.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Adivina la palabra oculta en seis intentos." />
+                              <Label text="Cada intento debe ser una palabra válida de 5 letras." GridPane.rowIndex="1" />
+                              <Label text="Después de cada intento el color de las letras cambia para mostrar qué tan cerca estás de acertar la palabra." GridPane.rowIndex="2" />
+                              <Label text="Ejemplos" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <GridPane GridPane.rowIndex="4">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" text="M">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" style="-fx-background-color: green;" text="A" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="N" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="G" GridPane.columnIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="O" GridPane.columnIndex="4">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="6">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" text="M">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="A" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="R" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" style="-fx-background-color: yellow;" text="C" GridPane.columnIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="O" GridPane.columnIndex="4">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="8">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" text="P">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="O" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" style="-fx-background-color: GRAY;" text="L" GridPane.columnIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="V" GridPane.columnIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField alignment="CENTER" editable="false" text="O" GridPane.columnIndex="4">
+                                       <GridPane.margin>
+                                          <Insets bottom="4.0" left="30.0" right="30.0" top="4.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                 </children>
+                              </GridPane>
+                              <Label text="La letra A está enla palabra y en la posición correcta" GridPane.rowIndex="5" />
+                              <Label text="La letra C está en la palabra pero en la posición incorrecta" GridPane.rowIndex="7" />
+                              <Label text="La letra L no está en la palabra" GridPane.rowIndex="9" />
+                              <Label text="Puede haber letras repetidas y en ese caso las pistas son independientes para cada letra y tienen prioridad" GridPane.rowIndex="10" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Wordle">
+              <content>
+                <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="75.0" layoutY="446.0" prefHeight="180.0" prefWidth="550.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="W" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="E" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="R" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="T" GridPane.columnIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="Y" GridPane.columnIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="U" GridPane.columnIndex="6">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="I" GridPane.columnIndex="7">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="O" GridPane.columnIndex="8">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="P" GridPane.columnIndex="9">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="Ñ" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="L" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="K" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="J" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="H" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="G" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="F" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="D" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="S" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="A" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="Z" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="C" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="V" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="B" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="N" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="M" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#borrar" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="Borrar" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addLetter" prefHeight="78.0" prefWidth="76.0" style="-fx-background-radius: 5;" text="Q">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Button layoutX="78.0" layoutY="570.0" mnemonicParsing="false" onAction="#enviar" prefHeight="52.0" prefWidth="105.0" style="-fx-background-radius: 5;" text="Enviar" />
+                        <Button layoutX="599.0" layoutY="118.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="73.0" text="Start" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="73.0" />
+                        <Button layoutX="562.0" layoutY="128.0" mnemonicParsing="false" onAction="#reinicio" prefHeight="35.0" prefWidth="73.0" text="Restart" />
+                        <GridPane layoutX="163.0" layoutY="37.0" prefHeight="368.0" prefWidth="373.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="textAA" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textAB" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textAC" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textAD" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textAE" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textBA" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textBB" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textBC" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textBD" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textBE" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textCA" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textCB" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textCC" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textCD" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textCE" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textDA" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textDB" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textDC" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textDD" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textDE" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textEA" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textEB" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textEC" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textED" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textEE" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textFA" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textFB" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textFC" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textFD" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="textFE" alignment="CENTER" editable="false" prefHeight="56.0" prefWidth="74.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab2" text="Estadisticas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="28.0" layoutY="30.0" prefHeight="71.0" prefWidth="199.0" text="Victorias">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="victorias" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="104.0" prefHeight="90.0" prefWidth="119.0" text="0">
+                           <font>
+                              <Font size="66.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="413.0" layoutY="30.0" prefHeight="71.0" prefWidth="258.0" text="Porcentaje de victorias">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="procentajes" layoutX="483.0" layoutY="104.0" prefHeight="96.0" prefWidth="172.0" text="0%">
+                           <font>
+                              <Font size="66.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="30.0" prefHeight="71.0" prefWidth="199.0" text="Derrotas">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="derrotas" alignment="CENTER" contentDisplay="CENTER" layoutX="246.0" layoutY="104.0" prefHeight="90.0" prefWidth="119.0" text="0">
+                           <font>
+                              <Font size="66.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="68.0" layoutY="252.0" prefHeight="254.0" prefWidth="211.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="textAA1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAB1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAC1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAD1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textAE1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBA1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBB1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBC1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBD1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textBE1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCA1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCB1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCC1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCD1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textCE1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDA1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDB1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDC1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDD1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textDE1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEA1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEB1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEC1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textED1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textEE1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFA1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFB1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFC1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFD1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="textFE1" alignment="CENTER" editable="false" prefHeight="36.0" prefWidth="12.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="lab1" layoutX="292.0" layoutY="263.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab2" layoutX="292.0" layoutY="307.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab3" layoutX="292.0" layoutY="352.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab4" layoutX="292.0" layoutY="392.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab5" layoutX="292.0" layoutY="429.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lab6" layoutX="292.0" layoutY="476.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="tiempo" alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="306.0" prefHeight="42.0" prefWidth="192.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="391.0" layoutY="252.0" prefHeight="43.0" prefWidth="232.0" text="Tiempo de la partida">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
